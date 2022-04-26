@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Plugin>
+	<Information>
+		<Name>Second Breakfast</Name>
+		<Author>Durhamster</Author>
+		<Version>1.0</Version>
+	</Information>
+	<Package>Second_Breakfast.SecondBreakfast.main</Package>
+</Plugin>
