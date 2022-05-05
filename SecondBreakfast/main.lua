@@ -6,9 +6,9 @@ CheckMealTime = Turbine.ShellCommand()
 ListMealTimes = Turbine.ShellCommand()
 
 -- Variables used
-time = Turbine.Engine.GetDate();
-gameTime = time[" hour"];
-gameTime_min = time[" minute"];
+getDate = Turbine.Engine.GetDate();
+gameTime = getDate.Hour;
+gameTime_min = getDate.Minute;
 player = Turbine.Gameplay.LocalPlayer.GetInstance()
 
 
@@ -83,7 +83,8 @@ function CheckMealTime:Execute()
         elseif gameTime >= 0 and gameTime < 7 then
             next_meal_time_hr = 7 - gameTime
             next_meal_time = 60 - gameTime_min
-            Turbine.Shell.WriteLine("It will be time for breakfast in " .. next_meal_time_hr .. " hour(s), " ..  next_meal_time .. " minutes.")
+            Turbine.Shell.WriteLine("What are you doing up so late?")
+            Turbine.Shell.WriteLine("It will be time for breakfast in " .. next_meal_time_hr .. " hour(s), " ..  next_meal_time .. " minutes!")
         end
     end
 
